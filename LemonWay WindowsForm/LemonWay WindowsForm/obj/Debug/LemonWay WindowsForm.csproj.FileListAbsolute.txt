@@ -1,0 +1,10 @@
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\bin\Debug\LemonWay WindowsForm.exe.config
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\bin\Debug\LemonWay WindowsForm.exe
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\bin\Debug\LemonWay WindowsForm.pdb
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay WindowsForm.csprojResolveAssemblyReference.cache
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay_WindowsForm.Form1.resources
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay_WindowsForm.Properties.Resources.resources
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay WindowsForm.csproj.GenerateResource.Cache
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay WindowsForm.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay WindowsForm.exe
+C:\Users\nicol\source\repos\LemonWay WindowsForm\LemonWay WindowsForm\obj\Debug\LemonWay WindowsForm.pdb

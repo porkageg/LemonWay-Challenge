@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LemonWay Challenge", "LemonWay Challenge\", "{A377D99C-E212-45D3-82C7-63AED4393280}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53699"
+		Debug.AspNetCompiler.PhysicalPath = "LemonWay Challenge\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53699\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53699"
+		Release.AspNetCompiler.PhysicalPath = "LemonWay Challenge\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53699\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53699"
+		SlnRelativePath = "LemonWay Challenge\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A377D99C-E212-45D3-82C7-63AED4393280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A377D99C-E212-45D3-82C7-63AED4393280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A31399B-3C72-464D-9539-97311FB00D67}
+	EndGlobalSection
+EndGlobal
