@@ -23,15 +23,19 @@ namespace LemonWay_WindowsForm
             srv = new lemonway.Service();
         }
 
-        private void fibbonacciEvent(object sender, EventArgs arg)
+        private void button1_Click(object sender, EventArgs e)
         {
-            button1.Enabled = true;
-            timer1.Stop();
-            waitingForm.Close();
-        }
+            waitingForm = new WaitingForm();
+            waitingForm.Show();
+            button1.Enabled = false;
 
-        private void fibbonacciCall()
-        {
+            MyLongRunningTaskEvent += (object s, EventArgs arg) => {
+                button1.Enabled = true;
+                timer1.Stop();
+                waitingForm.Close();
+            };
+
+            Thread thread = new Thread(() => {
             int res = 0;
             try
             {
@@ -41,18 +45,8 @@ namespace LemonWay_WindowsForm
             {
                 this.BeginInvoke(MyLongRunningTaskEvent, this, EventArgs.Empty);
                 MessageBox.Show("" + res);
-            }
+            }}) { IsBackground = true };
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            waitingForm = new WaitingForm();
-            waitingForm.Show();
-            button1.Enabled = false;
-
-            MyLongRunningTaskEvent += fibbonacciEvent;
-            Thread thread = new Thread(fibbonacciCall) { IsBackground = true };
             thread.Start();
         }
     }
