@@ -14,48 +14,47 @@ namespace LemonWay_WindowsForm
     {
         lemonway.Service srv;
         Thread task;
+        Form waitingForm;
+
+        public event EventHandler MyLongRunningTaskEvent;
 
         public Form1()
         {
             InitializeComponent();
             srv = new lemonway.Service();
-            progressBar1.Style = ProgressBarStyle.Marquee;
-            timer1.Tick += timer1_Tick;
-            progressBar1.Visible = false;
+        }
+
+        private void fibbonacciEvent(object sender, EventArgs arg)
+        {
+            button1.Enabled = true;
+            timer1.Stop();
+            waitingForm.Close();
+        }
+
+        private void fibbonacciCall()
+        {
+            int res = 0;
+            try
+            {
+                res = srv.Fibonacci(10);
+            }
+            finally
+            {
+                this.BeginInvoke(MyLongRunningTaskEvent, this, EventArgs.Empty);
+                MessageBox.Show("" + res);
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            progressBar1.Visible = true;
+            waitingForm = new WaitingForm();
+            waitingForm.Show();
             button1.Enabled = false;
 
-            task = new Thread(() => {
-                var res = srv.Fibonacci(10);
-                MessageBox.Show("" + res);
-            });
-            task.Start();
-
-            Cursor.Current = Cursors.WaitCursor;
-
-            timer1.Interval = 100;
-            timer1.Start();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (task == null)
-            {
-                timer1.Stop();
-                return;
-            }
-
-            if (task.IsAlive)
-                return;
-
-            button1.Enabled = true;
-            timer1.Stop();
-            progressBar1.Visible = false;
-            task = null;
+            MyLongRunningTaskEvent += fibbonacciEvent;
+            Thread _thread = new Thread(fibbonacciCall) { IsBackground = true };
+            _thread.Start();
         }
     }
 }
