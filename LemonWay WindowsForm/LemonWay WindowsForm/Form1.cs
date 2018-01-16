@@ -13,7 +13,6 @@ namespace LemonWay_WindowsForm
     public partial class Form1 : Form
     {
         lemonway.Service srv;
-        Thread task;
         Form waitingForm;
 
         public event EventHandler MyLongRunningTaskEvent;
@@ -53,8 +52,8 @@ namespace LemonWay_WindowsForm
             button1.Enabled = false;
 
             MyLongRunningTaskEvent += fibbonacciEvent;
-            Thread _thread = new Thread(fibbonacciCall) { IsBackground = true };
-            _thread.Start();
+            Thread thread = new Thread(fibbonacciCall) { IsBackground = true };
+            thread.Start();
         }
     }
 }
